@@ -1,0 +1,13 @@
+logfacility	local0
+keepalive 250ms
+deadtime 2
+warntime 1
+initdead 10
+
+auto_failback off
+
+node <%= @node %>
+<% @partner_hash.each_pair do |ha_partner,value_hash| -%>
+ucast eth0 <%= value_hash['ip'] %>
+node <%= ha_partner %>
+<% end -%>
