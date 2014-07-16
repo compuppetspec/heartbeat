@@ -1,7 +1,7 @@
 require 'spec_helper'
 	
 	describe 'get_primary' do
-	it { should run.with_params({'k1' => 'v1'}) }
+	it { should run.with_params({'hosttest' => 'hostvalue'}) }
 	end
 	
 	describe 'int_address' do
